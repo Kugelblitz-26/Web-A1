@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German A1 Revision - Willkommen! 🇩🇪</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with progress -->
+        <header class="header">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">Slide 1 of 19</span>
+            </div>
+        </header>
+
+        <!-- Slide Container -->
+        <main class="slides-container" id="slidesContainer">
+            
+            <!-- Slide 1: Welcome & Overview -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <h1>🇩🇪 German A1 Revision</h1>
+                    <h2>Willkommen! Welcome!</h2>
+                    <p class="text-center" style="font-size: 1.1rem; color: var(--color-text-secondary);">Your complete interactive guide to mastering the basics of the German language.</p>
+                    <div class="overview-grid">
+                        <div class="overview-item"><span class="icon">👋</span><h3>Self Introduction</h3><p>Learn to introduce yourself</p></div>
+                        <div class="overview-item"><span class="icon">📚</span><h3>Grammar Basics</h3><p>Articles, pronouns, verbs</p></div>
+                        <div class="overview-item"><span class="icon">🗣️</span><h3>Vocabulary</h3><p>Essential German words</p></div>
+                        <div class="overview-item"><span class="icon">🎯</span><h3>Practice</h3><p>Interactive exercises</p></div>
+                    </div>
+                    <div class="fun-facts">
+                        <h3>🎉 Fun Facts about German:</h3>
+                        <ul>
+                            <li>All nouns in German are capitalized, no matter where they are in a sentence.</li>
+                            <li>German has three genders for nouns: masculine (der), feminine (die), and neuter (das).</li>
+                            <li>German loves creating long compound words, like <strong>Donaudampfschifffahrtsgesellschaftskapitän</strong>!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Sich Vorstellen -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <h1>👋 Sich Vorstellen - Self Introduction</h1>
+                    <div class="two-column">
+                        <div class="column">
+                            <h3>Essential Questions & Answers:</h3>
+                            <div class="qa-pair"><strong>Wie heißen Sie?</strong><br><em>Ich heiße [Name].</em></div>
+                            <div class="qa-pair"><strong>Wie alt sind Sie?</strong><br><em>Ich bin [Zahl] Jahre alt.</em></div>
+                            <div class="qa-pair"><strong>Woher kommen Sie?</strong><br><em>Ich komme aus [Land].</em></div>
+                            <div class="qa-pair"><strong>Wo wohnen Sie?</strong><br><em>Ich wohne in [Stadt].</em></div>
+                            <div class="qa-pair"><strong>Was sind Sie von Beruf?</strong><br><em>Ich bin [Beruf].</em></div>
+                            <div class="qa-pair"><strong>Welche Sprachen sprechen Sie?</strong><br><em>Ich spreche [Sprache] und ein bisschen Deutsch.</em></div>
+                        </div>
+                        <div class="column">
+                            <h3>🎯 Practice Exercise:</h3>
+                            <div class="exercise">
+                                <p>Fill in the blanks to introduce yourself:</p>
+                                <div class="fill-blank">
+                                    <p>Hallo! Ich <input type="text" class="blank-input" data-answer="heiße"> Maria.</p>
+                                    <p>Ich <input type="text" class="blank-input" data-answer="bin"> 25 Jahre alt.</p>
+                                    <p>Ich <input type="text" class="blank-input" data-answer="komme"> aus Spanien.</p>
+                                    <p>Ich <input type="text" class="blank-input" data-answer="wohne"> in Berlin.</p>
+                                </div>
+                                <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check Answers</button>
+                                <div class="feedback" style="display: none;"></div>
+                            </div>
+                            <div class="exercise" style="margin-top: 20px;">
+                                <p>Which question asks for your origin?</p>
+                                <div class="mcq">
+                                    <div class="options"><button class="option" data-correct="false">Wo wohnen Sie?</button><button class="option" data-correct="true">Woher kommen Sie?</button><button class="option" data-correct="false">Wie heißen Sie?</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Personal Pronouns -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <h1>👥 Personalpronomen - Personal Pronouns</h1>
+                    <div class="pronoun-table">
+                        <table>
+                            <thead><tr><th>Person</th><th>Nominativ (Subject)</th><th>Akkusativ (Direct Object)</th><th>Dativ (Indirect Object)</th></tr></thead>
+                            <tbody>
+                                <tr><td>1st sing. (I)</td><td>ich</td><td>mich</td><td>mir</td></tr>
+                                <tr><td>2nd sing. (you, inf.)</td><td>du</td><td>dich</td><td>dir</td></tr>
+                                <tr><td>3rd sing. (he)</td><td>er</td><td>ihn</td><td>ihm</td></tr>
+                                <tr><td>3rd sing. (she)</td><td>sie</td><td>sie</td><td>ihr</td></tr>
+                                <tr><td>3rd sing. (it)</td><td>es</td><td>es</td><td>ihm</td></tr>
+                                <tr><td>1st plural (we)</td><td>wir</td><td>uns</td><td>uns</td></tr>
+                                <tr><td>2nd plural (you all)</td><td>ihr</td><td>euch</td><td>euch</td></tr>
+                                <tr><td>3rd plural (they)</td><td>sie</td><td>sie</td><td>ihnen</td></tr>
+                                <tr><td>Formal (You)</td><td>Sie</td><td>Sie</td><td>Ihnen</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="exercise">
+                        <h3>🎯 Practice:</h3>
+                        <div class="mcq"><p>Er gibt ___ das Buch. (to me)</p><div class="options"><button class="option" data-correct="false">ich</button><button class="option" data-correct="false">mich</button><button class="option" data-correct="true">mir</button></div></div>
+                        <div class="mcq"><p>Ich sehe ___. (him)</p><div class="options"><button class="option" data-correct="false">er</button><button class="option" data-correct="true">ihn</button><button class="option" data-correct="false">ihm</button></div></div>
+                        <div class="mcq"><p>Der Lehrer hilft ___. (you, informal)</p><div class="options"><button class="option" data-correct="false">du</button><button class="option" data-correct="false">dich</button><button class="option" data-correct="true">dir</button></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Articles & Cases -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <h1>📝 Artikel & Fälle - Articles & Cases</h1>
+                    <div class="articles-table">
+                        <table>
+                            <thead><tr><th>Case</th><th class="masculine">Maskulin (der)</th><th class="feminine">Feminin (die)</th><th class="neuter">Neutrum (das)</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Nominativ</strong></td><td class="masculine">der Mann</td><td class="feminine">die Frau</td><td class="neuter">das Kind</td></tr>
+                                <tr><td><strong>Akkusativ</strong></td><td class="masculine">de<strong>n</strong> Mann</td><td class="feminine">die Frau</td><td class="neuter">das Kind</td></tr>
+                                <tr><td><strong>Dativ</strong></td><td class="masculine">de<strong>m</strong> Mann</td><td class="feminine">de<strong>r</strong> Frau</td><td class="neuter">de<strong>m</strong> Kind</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="card__body" style="background: var(--color-bg-2);"><p>💡 <strong>Tipp:</strong> Only the masculine article changes in the accusative case! This is a very common pattern.</p></div>
+                    </div>
+                    <div class="exercise">
+                        <h3>🎯 Practice:</h3>
+                        <p>Fill in the correct definite article:</p>
+                        <div class="fill-blank">
+                            <p>Ich sehe <input type="text" class="blank-input" data-answer="den"> Stuhl. (Akkusativ)</p>
+                            <p>Das ist <input type="text" class="blank-input" data-answer="die"> Lampe. (Nominativ)</p>
+                            <p>Ich helfe <input type="text" class="blank-input" data-answer="dem"> Kind. (Dativ)</p>
+                        </div>
+                        <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check Answers</button>
+                        <div class="feedback" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 5: W-Fragen (W-Questions) -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <h1>❓ W-Fragen - W-Questions</h1>
+                    <div class="two-column">
+                        <div class="column">
+                           <h3>Common Question Words:</h3>
+                            <table>
+                                <tr><td><strong>Wer?</strong></td><td>Who? (for people)</td></tr>
+                                <tr><td><strong>Was?</strong></td><td>What? (for things)</td></tr>
+                                <tr><td><strong>Wo?</strong></td><td>Where? (location)</td></tr>
+                                <tr><td><strong>Wohin?</strong></td><td>Where to? (direction)</td></tr>
+                                <tr><td><strong>Woher?</strong></td><td>Where from?</td></tr>
+                                <tr><td><strong>Wann?</strong></td><td>When?</td></tr>
+                                <tr><td><strong>Wie?</strong></td><td>How?</td></tr>
+                                <tr><td><strong>Warum?</strong></td><td>Why?</td></tr>
+                            </table>
+                        </div>
+                        <div class="column">
+                           <h3>🎯 Practice: Match the Question to the Answer</h3>
+                            <div class="exercise">
+                                <div class="fill-blank">
+                                    <p><input type="text" class="blank-input" data-answer="wer"> ist das? - Das ist mein Freund.</p>
+                                    <p><input type="text" class="blank-input" data-answer="wo"> wohnen Sie? - Ich wohne in Hamburg.</p>
+                                    <p><input type="text" class="blank-input" data-answer="wann"> beginnt der Film? - Um 20 Uhr.</p>
+                                </div>
+                                <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check Answers</button>
+                                <div class="feedback" style="display: none;"></div>
+                            </div>
+                           <div class="exercise" style="margin-top: 20px;">
+                                <p>Form the question for the answer: "Ich lerne Deutsch, weil es interessant ist."</p>
+                                <div class="fill-blank">
+                                    <p><input type="text" class="blank-input" style="width: 300px;" data-answer="Warum lernst du Deutsch?|Warum lernen Sie Deutsch?"></p>
+                                </div>
+                                <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check</button>
+                                <div class="feedback" style="display: none;"></div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Verb Conjugation -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content">
+                    <h1>🔄 Verbkonjugation - Verb Conjugation</h1>
+                    <div class="verb-tables">
+                        <div class="verb-table"><h3>Regular (wohnen)</h3><table><tr><td>ich</td><td>wohn<strong>e</strong></td></tr><tr><td>du</td><td>wohn<strong>st</strong></td></tr><tr><td>er/sie/es</td><td>wohn<strong>t</strong></td></tr><tr><td>wir</td><td>wohn<strong>en</strong></td></tr><tr><td>ihr</td><td>wohn<strong>t</strong></td></tr><tr><td>sie/Sie</td><td>wohn<strong>en</strong></td></tr></table></div>
+                        <div class="verb-table"><h3>Irregular (sein)</h3><table><tr><td>ich</td><td>bin</td></tr><tr><td>du</td><td>bist</td></tr><tr><td>er/sie/es</td><td>ist</td></tr><tr><td>wir</td><td>sind</td></tr><tr><td>ihr</td><td>seid</td></tr><tr><td>sie/Sie</td><td>sind</td></tr></table></div>
+                        <div class="verb-table"><h3>Irregular (sprechen)</h3><table><tr><td>ich</td><td>spreche</td></tr><tr><td>du</td><td>sprichst</td></tr><tr><td>er/sie/es</td><td>spricht</td></tr><tr><td>wir</td><td>sprechen</td></tr><tr><td>ihr</td><td>sprecht</td></tr><tr><td>sie/Sie</td><td>sprechen</td></tr></table></div>
+                    </div>
+                    <div class="exercise">
+                        <h3>🎯 Practice:</h3>
+                        <p>Conjugate the verbs in parentheses:</p>
+                        <div class="fill-blank">
+                            <p>Ich <input type="text" class="blank-input" data-answer="bin"> Student. (sein)</p>
+                            <p>Du <input type="text" class="blank-input" data-answer="hast"> ein Auto. (haben)</p>
+                            <p>Er <input type="text" class="blank-input" data-answer="spricht"> sehr gut Englisch. (sprechen)</p>
+                        </div>
+                        <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check Answers</button>
+                        <div class="feedback" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Possessive Articles -->
+            <div class="slide" data-slide="7">
+                <div class="slide-content">
+                    <h1>👨‍👩‍👧‍👦 Possessivartikel - Possessive Articles</h1>
+                    <div class="two-column">
+                        <div class="column">
+                            <h3>Possessive Articles List:</h3>
+                            <div class="possessive-list">
+                                <p><strong>ich</strong> → mein / meine (my)</p>
+                                <p><strong>du</strong> → dein / deine (your)</p>
+                                <p><strong>er/es</strong> → sein / seine (his/its)</p>
+                                <p><strong>sie</strong> → ihr / ihre (her)</p>
+                                <p><strong>wir</strong> → unser / unsere (our)</p>
+                                <p><strong>ihr</strong> → euer / eure (your, pl.)</p>
+                                <p><strong>sie/Sie</strong> → ihr / ihre / Ihr / Ihre (their/Your)</p>
+                            </div>
+                            <div class="card__body" style="background: var(--color-bg-1);"><p>💡 <strong>Tipp:</strong> Use the form without '-e' for masculine and neuter nouns (mein Vater, mein Buch). Use the form with '-e' for feminine and plural nouns (meine Mutter, meine Bücher).</p></div>
+                        </div>
+                        <div class="column">
+                            <h3>🎯 Practice:</h3>
+                            <div class="exercise">
+                                <p>Fill in the correct possessive article:</p>
+                                <div class="fill-blank">
+                                    <p>Das ist <input type="text" class="blank-input" data-answer="mein"> Vater (der Vater).</p>
+                                    <p>Das ist <input type="text" class="blank-input" data-answer="meine"> Mutter (die Mutter).</p>
+                                    <p>Anna liebt <input type="text" class="blank-input" data-answer="ihr"> Auto (das Auto).</p>
+                                    <p>Kinder, wo ist <input type="text" class="blank-input" data-answer="euer"> Hund (der Hund)?</p>
+                                </div>
+                                <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check Answers</button>
+                                <div class="feedback" style="display: none;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Satzbau (Sentence Structure) -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content">
+                    <h1>🏗️ Satzbau - Sentence Structure</h1>
+                    <h3>The Basics: Verb in Second Position (V2)</h3>
+                    <p>In a standard German statement, the conjugated verb is always the second element.</p>
+                    <div class="sentence-structure">
+                        <div><span>Position 1</span><p>Ich</p></div>
+                        <div><span class="verb">Position 2 (Verb)</span><p>lerne</p></div>
+                        <div><span>Position 3</span><p>Deutsch.</p></div>
+                    </div>
+                    <div class="sentence-structure">
+                        <div><span>Position 1</span><p>Heute</p></div>
+                        <div><span class="verb">Position 2 (Verb)</span><p>lerne</p></div>
+                        <div><span>Position 3</span><p>ich Deutsch.</p></div>
+                    </div>
+                    <div class="card__body" style="background: var(--color-bg-3);"><p><strong>Notice:</strong> If an element like "Heute" (Today) is in position 1, the subject "ich" moves to position 3, right after the verb!</p></div>
+                    <div class="exercise">
+                        <h3>🎯 Practice: Build a sentence</h3>
+                        <p>Unscramble the words to make a correct sentence:</p>
+                        <div class="fill-blank">
+                            <p><strong>(gern / Ich / Pizza / esse)</strong><br> <input type="text" class="blank-input" data-answer="Ich esse gern Pizza." style="width: 250px;"></p>
+                            <p><strong>(morgen / wir / ins / gehen / Kino)</strong><br> <input type="text" class="blank-input" data-answer="Morgen gehen wir ins Kino." style="width: 250px;"></p>
+                        </div>
+                        <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check Answers</button>
+                        <div class="feedback" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+            
+             <!-- Slide 9: Modalverben (Modal Verbs) -->
+            <div class="slide" data-slide="9">
+                <div class="slide-content">
+                    <h1>🗣️ Modalverben - Modal Verbs</h1>
+                    <p>Modal verbs change the meaning of another verb. The modal verb is conjugated (V2), and the main verb goes to the end of the sentence in its infinitive form.</p>
+                    <div class="verb-tables">
+                        <div class="verb-table"><h3>können (can)</h3><table><tr><td>ich</td><td>kann</td></tr><tr><td>du</td><td>kannst</td></tr><tr><td>er/sie/es</td><td>kann</td></tr></table></div>
+                        <div class="verb-table"><h3>wollen (want to)</h3><table><tr><td>ich</td><td>will</td></tr><tr><td>du</td><td>willst</td></tr><tr><td>er/sie/es</td><td>will</td></tr></table></div>
+                        <div class="verb-table"><h3>müssen (must)</h3><table><tr><td>ich</td><td>muss</td></tr><tr><td>du</td><td>musst</td></tr><tr><td>er/sie/es</td><td>muss</td></tr></table></div>
+                    </div>
+                    <div class="card__body" style="background: var(--color-bg-3); margin-bottom: 1rem;"><p><strong>Beispiel:</strong> Ich <span class="verb">kann</span> gut Deutsch <span class="verb">sprechen</span>.</p></div>
+                    <div class="exercise">
+                        <h3>🎯 Practice:</h3>
+                        <div class="mcq"><p>Ich bin krank. Ich ___ im Bett bleiben.</p><div class="options"><button class="option" data-correct="false">kann</button><button class="option" data-correct="false">will</button><button class="option" data-correct="true">muss</button></div></div>
+                        <div class="fill-blank"><p>Er <input type="text" class="blank-input" data-answer="will"> heute Abend Pizza essen. (wollen)</p></div>
+                        <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10: Präpositionen (Prepositions) -->
+            <div class="slide" data-slide="10">
+                <div class="slide-content">
+                    <h1>📍 Präpositionen - Prepositions</h1>
+                    <div class="two-column">
+                        <div class="column">
+                            <h3>Mit Akkusativ:</h3>
+                            <div class="qa-pair"><strong>für</strong> (for) → Das Geschenk ist für <strong>dich</strong>.</div>
+                            <div class="qa-pair"><strong>ohne</strong> (without) → Ich gehe ohne <strong>meinen</strong> Regenschirm.</div>
+                            <div class="qa-pair"><strong>durch</strong> (through) → Wir gehen durch <strong>den</strong> Park.</div>
+                        </div>
+                        <div class="column">
+                            <h3>Mit Dativ:</h3>
+                            <div class="qa-pair"><strong>mit</strong> (with) → Ich fahre mit <strong>dem</strong> Bus.</div>
+                            <div class="qa-pair"><strong>nach</strong> (to/after) → Wir fliegen nach <strong>Deutschland</strong>.</div>
+                            <div class="qa-pair"><strong>von</strong> (from) → Das ist ein Geschenk von <strong>meiner</strong> Mutter.</div>
+                        </div>
+                    </div>
+                    <div class="exercise">
+                        <h3>🎯 Practice:</h3>
+                        <div class="mcq"><p>Der Kaffee ist für ___ (he).</p><div class="options"><button class="option" data-correct="false">er</button><button class="option" data-correct="true">ihn</button><button class="option" data-correct="false">ihm</button></div></div>
+                        <div class="fill-blank"><p>Ich fahre <input type="text" class="blank-input" data-answer="mit"> dem Zug.</p></div>
+                         <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11: Perfekt (Past Tense) -->
+            <div class="slide" data-slide="11">
+                <div class="slide-content">
+                    <h1>🕰️ Das Perfekt - The Perfect Tense (Past)</h1>
+                    <p>The Perfekt tense is used to talk about the past, especially in spoken German. It is formed with the helping verb <strong>haben</strong> or <strong>sein</strong> and a past participle.</p>
+                    <div class="two-column">
+                        <div class="column">
+                            <h3>Mit "haben" (most verbs):</h3>
+                            <p><strong>Struktur:</strong> Subjekt + haben (konjugiert) + ... + Partizip II.</p>
+                            <div class="qa-pair">Ich <strong>habe</strong> einen Apfel <strong>gegessen</strong>. (I ate an apple.)</div>
+                            <div class="qa-pair">Er <strong>hat</strong> ein Buch <strong>gelesen</strong>. (He read a book.)</div>
+                        </div>
+                        <div class="column">
+                            <h3>Mit "sein" (verbs of motion/change):</h3>
+                            <p><strong>Struktur:</strong> Subjekt + sein (konjugiert) + ... + Partizip II.</p>
+                             <div class="qa-pair">Ich <strong>bin</strong> nach Berlin <strong>gefahren</strong>. (I traveled to Berlin.)</div>
+                            <div class="qa-pair">Wir <strong>sind</strong> ins Kino <strong>gegangen</strong>. (We went to the cinema.)</div>
+                        </div>
+                    </div>
+                    <div class="exercise">
+                        <h3>🎯 Practice: Form the Perfekt</h3>
+                        <div class="fill-blank">
+                            <p>Was <input type="text" class="blank-input" data-answer="hast"> du gestern <input type="text" class="blank-input" data-answer="gemacht">? (machen)</p>
+                            <p>Sie <input type="text" class="blank-input" data-answer="ist"> nach Hause <input type="text" class="blank-input" data-answer="gegangen">. (gehen)</p>
+                        </div>
+                        <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check Answers</button>
+                        <div class="feedback" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NEW FLASHCARD SLIDES START HERE -->
+
+            <!-- Slide 12: Flashcards: Familie -->
+            <div class="slide" data-slide="12">
+                <div class="slide-content">
+                    <h1>🃏 Flashcards: Familie</h1>
+                    <p class="text-center" style="color: var(--color-text-secondary); margin-bottom: 2rem;">Hover over a card to flip it and see the English translation. Remember to learn the article with the noun!</p>
+                    <div class="flashcard-grid">
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">der Vater</div><div class="flashcard-back">the father</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Mutter</div><div class="flashcard-back">the mother</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Eltern</div><div class="flashcard-back">the parents</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">der Sohn</div><div class="flashcard-back">the son</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Tochter</div><div class="flashcard-back">the daughter</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">der Bruder</div><div class="flashcard-back">the brother</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Schwester</div><div class="flashcard-back">the sister</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Geschwister</div><div class="flashcard-back">the siblings</div></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 13: Flashcards: Essen & Trinken -->
+            <div class="slide" data-slide="13">
+                <div class="slide-content">
+                    <h1>🃏 Flashcards: Essen & Trinken</h1>
+                     <p class="text-center" style="color: var(--color-text-secondary); margin-bottom: 2rem;">Hover over a card to flip it!</p>
+                    <div class="flashcard-grid">
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">das Brot</div><div class="flashcard-back">the bread</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">das Wasser</div><div class="flashcard-back">the water</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">der Apfel</div><div class="flashcard-back">the apple</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Milch</div><div class="flashcard-back">the milk</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">der Käse</div><div class="flashcard-back">the cheese</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">der Kaffee</div><div class="flashcard-back">the coffee</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">das Fleisch</div><div class="flashcard-back">the meat</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Kartoffel</div><div class="flashcard-back">the potato</div></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 14: Flashcards: Orte in der Stadt -->
+            <div class="slide" data-slide="14">
+                <div class="slide-content">
+                    <h1>🃏 Flashcards: Orte in der Stadt</h1>
+                     <p class="text-center" style="color: var(--color-text-secondary); margin-bottom: 2rem;">Hover over a card to flip it!</p>
+                    <div class="flashcard-grid">
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">der Bahnhof</div><div class="flashcard-back">the train station</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">der Supermarkt</div><div class="flashcard-back">the supermarket</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">das Kino</div><div class="flashcard-back">the cinema</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">das Restaurant</div><div class="flashcard-back">the restaurant</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Schule</div><div class="flashcard-back">the school</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Apotheke</div><div class="flashcard-back">the pharmacy</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Bank</div><div class="flashcard-back">the bank</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">das Krankenhaus</div><div class="flashcard-back">the hospital</div></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 15: Flashcards: Adjektive -->
+            <div class="slide" data-slide="15">
+                <div class="slide-content">
+                    <h1>🃏 Flashcards: Wichtige Adjektive</h1>
+                     <p class="text-center" style="color: var(--color-text-secondary); margin-bottom: 2rem;">Hover over a card to flip it!</p>
+                    <div class="flashcard-grid">
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">gut / schlecht</div><div class="flashcard-back">good / bad</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">groß / klein</div><div class="flashcard-back">big / small</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">neu / alt</div><div class="flashcard-back">new / old</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">schnell / langsam</div><div class="flashcard-back">fast / slow</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">teuer / billig</div><div class="flashcard-back">expensive / cheap</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">warm / kalt</div><div class="flashcard-back">warm / cold</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">schön / hässlich</div><div class="flashcard-back">beautiful / ugly</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">interessant / langweilig</div><div class="flashcard-back">interesting / boring</div></div></div>
+                    </div>
+                </div>
+            </div>
+                        <!-- Slide 16: Tagesablauf (Daily Routine) -->
+            <div class="slide" data-slide="16">
+                <div class="slide-content">
+                    <h1>🗓️ Tagesablauf - Daily Routine</h1>
+                    <p class="text-center" style="color: var(--color-text-secondary); margin-bottom: 2rem;">Learn how to describe your typical day in German.</p>
+                    <div class="two-column">
+                        <div class="column">
+                            <h3>Wichtige Verben (Important Verbs):</h3>
+                            <table>
+                                <tr><td><strong>aufstehen</strong></td><td>to get up</td></tr>
+                                <tr><td><strong>frühstücken</strong></td><td>to have breakfast</td></tr>
+                                <tr><td><strong>arbeiten</strong></td><td>to work</td></tr>
+                                <tr><td><strong>lernen</strong></td><td>to learn/study</td></tr>
+                                <tr><td><strong>Mittag essen</strong></td><td>to have lunch</td></tr>
+                                <tr><td><strong>Abend essen</strong></td><td>to have dinner</td></tr>
+                                <tr><td><strong>fernsehen</strong></td><td>to watch TV</td></tr>
+                                <tr><td><strong>schlafen gehen</strong></td><td>to go to sleep</td></tr>
+                            </table>
+                             <div class="card__body" style="background: var(--color-bg-1);"><p>💡 <strong>Tipp:</strong> Many routine verbs are separable! The prefix goes to the end of the sentence. Example: Ich stehe um 7 Uhr <strong>auf</strong>.</p></div>
+                        </div>
+                        <div class="column">
+                            <h3>🎯 Practice:</h3>
+                            <div class="exercise">
+                                <p>Fill in the blank with the correct verb:</p>
+                                <div class="fill-blank">
+                                    <p>Am Morgen <input type="text" class="blank-input" data-answer="frühstücke"> ich um 8 Uhr.</p>
+                                    <p>Ich <input type="text" class="blank-input" data-answer="arbeite"> von 9 bis 17 Uhr im Büro.</p>
+                                    <p>Wann <input type="text" class="blank-input" data-answer="gehst"> du <input type="text" class="blank-input" data-answer="schlafen">?</p>
+                                </div>
+                                <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check Answers</button>
+                                <div class="feedback" style="display: none;"></div>
+                            </div>
+                            <div class="exercise" style="margin-top: 20px;">
+                                <p>What do you do in the evening?</p>
+                                <div class="mcq">
+                                    <div class="options"><button class="option" data-correct="true">Ich sehe fern.</button><button class="option" data-correct="false">Ich aufstehe.</button><button class="option" data-correct="false">Ich frühstücke.</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 17: Kleidung (Clothing) -->
+            <div class="slide" data-slide="17">
+                <div class="slide-content">
+                    <h1>👕 Kleidung - Clothing</h1>
+                    <p class="text-center" style="color: var(--color-text-secondary); margin-bottom: 2rem;">Learn vocabulary for common items of clothing.</p>
+                    <div class="flashcard-grid">
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Hose</div><div class="flashcard-back">the pants</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">das Hemd</div><div class="flashcard-back">the shirt (collared)</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">der Pullover</div><div class="flashcard-back">the sweater</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Jacke</div><div class="flashcard-back">the jacket</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">die Schuhe (pl.)</div><div class="flashcard-back">the shoes</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">der Rock</div><div class="flashcard-back">the skirt</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">das Kleid</div><div class="flashcard-back">the dress</div></div></div>
+                        <div class="flashcard"><div class="flashcard-inner"><div class="flashcard-front">das T-Shirt</div><div class="flashcard-back">the T-shirt</div></div></div>
+                    </div>
+                    <div class="exercise" style="margin-top: 20px;">
+                        <h3>🎯 Practice:</h3>
+                        <div class="mcq"><p>Ich trage ein<strong>en</strong> neu<strong>en</strong> ___ (sweater).</p><div class="options"><button class="option" data-correct="true">Pullover</button><button class="option" data-correct="false">Rock</button><button class="option" data-correct="false">Hose</button></div></div>
+                        <div class="fill-blank"><p>Für das kalte Wetter kaufe ich <input type="text" class="blank-input" data-answer="eine"> warme Jacke.</p></div>
+                        <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 18: Wetter (Weather) -->
+            <div class="slide" data-slide="18">
+                <div class="slide-content">
+                    <h1>☀️ Wetter - Weather</h1>
+                    <p class="text-center" style="color: var(--color-text-secondary); margin-bottom: 2rem;">Learn how to talk about the weather.</p>
+                     <div class="two-column">
+                        <div class="column">
+                            <h3>Wie ist das Wetter?</h3>
+                            <table>
+                                <tr><td><strong>Die Sonne scheint.</strong></td><td>The sun is shining. (It's sunny.)</td></tr>
+                                <tr><td><strong>Es regnet.</strong></td><td>It's raining.</td></tr>
+                                <tr><td><strong>Es schneit.</strong></td><td>It's snowing.</td></tr>
+                                <tr><td><strong>Es ist windig.</strong></td><td>It's windy.</td></tr>
+                                <tr><td><strong>Es ist bewölkt.</strong></td><td>It's cloudy.</td></tr>
+                                <tr><td><strong>Es ist warm / heiß.</strong></td><td>It's warm / hot.</td></tr>
+                                <tr><td><strong>Es ist kalt.</strong></td><td>It's cold.</td></tr>
+                            </table>
+                        </div>
+                        <div class="column">
+                            <h3>🎯 Practice:</h3>
+                            <div class="exercise">
+                                <p>Fill in the blank:</p>
+                                <div class="fill-blank">
+                                    <p>Im Sommer ist es oft heiß und <input type="text" class="blank-input" data-answer="die Sonne scheint"></p>
+                                    <p>Nimm einen Regenschirm! <input type="text" class="blank-input" data-answer="Es regnet"></p>
+                                </div>
+                                <button class="btn btn--primary check-btn" onclick="checkAnswers(this)">Check Answers</button>
+                                <div class="feedback" style="display: none;"></div>
+                            </div>
+                             <div class="exercise" style="margin-top: 20px;">
+                                <p>What do you wear when it's cold?</p>
+                                <div class="mcq">
+                                    <div class="options"><button class="option" data-correct="false">Ein T-Shirt</button><button class="option" data-correct="true">Eine Jacke und einen Pullover</button><button class="option" data-correct="false">Einen Rock</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 19: Final Practice Test -->
+            <div class="slide" data-slide="19">
+                <div class="slide-content">
+                    <h1>🏆 Abschlussprüfung - Final Test</h1>
+                    <p>Test your knowledge of all A1 topics. Viel Erfolg!</p>
+                    <div class="final-test">
+                        <div class="test-question"><p><strong>1.</strong> Fill in the blank: "Ich ___ Anna und komme ___ Deutschland."</p><input type="text" class="test-input" placeholder="heiße / aus" data-answer="heiße / aus"></div>
+                        <div class="test-question"><p><strong>2.</strong> Choose the correct article: "Ich kaufe ___ (the apple)."</p><div class="mcq"><div class="options"><button class="option" data-correct="true">den Apfel</button><button class="option" data-correct="false">der Apfel</button><button class="option" data-correct="false">dem Apfel</button></div></div></div>
+                        <div class="test-question"><p><strong>3.</strong> Conjugate the modal verb: "Er ___ sehr gut schwimmen." (können)</p><input type="text" class="test-input" data-answer="kann"></div>
+                        <div class="test-question"><p><strong>4.</strong> Form a question for this answer: "Ich lerne Deutsch in der Schule."</p><input type="text" class="test-input" style="width: 300px;" placeholder="Wo...?" data-answer="Wo lernst du Deutsch?|Wo lernen Sie Deutsch?"></div>
+                        <div class="test-question"><p><strong>5.</strong> Choose the correct past tense form: "Gestern ___ ich ins Kino ___."</p><div class="mcq"><div class="options"><button class="option" data-correct="false">habe ... gegangen</button><button class="option" data-correct="true">bin ... gegangen</button><button class="option" data-correct="false">bin ... gegangt</button></div></div></div>
+                        <div class="test-question"><p><strong>6.</strong> Fill in the correct possessive article: "Maria, ist das ___ (your) Buch?"</p><input type="text" class="test-input" data-answer="dein"></div>
+                        <div class="test-question"><p><strong>7.</strong> Choose the correct preposition: "Ich fahre ___ dem Zug nach Berlin."</p><div class="mcq"><div class="options"><button class="option" data-correct="false">für</button><button class="option" data-correct="false">von</button><button class="option" data-correct="true">mit</button></div></div></div>
+                        <div class="test-question"><p><strong>8.</strong> What is the weather like? "Es ist kalt und es ___."</p><input type="text" class="test-input" placeholder="It's snowing." data-answer="schneit"></div>
+                    </div>
+                    <button class="btn btn--primary btn--lg" onclick="calculateFinalScore()">Calculate Final Score</button>
+                    <div class="final-score" id="finalScore" style="display: none;">
+                        <h3>Your Score: <span id="scoreValue">0</span>/8</h3>
+                        <p id="scoreMessage"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Navigation -->
+        <nav class="navigation">
+            <button class="btn btn--secondary" id="prevBtn" onclick="previousSlide()">← Previous</button>
+            <div class="slide-menu">
+                <select class="form-control" id="slideSelect" onchange="goToSlide(this.value)">
+                    <option value="1">1. Welcome</option>
+                    <option value="2">2. Self Introduction</option>
+                    <option value="3">3. Personal Pronouns</option>
+                    <option value="4">4. Articles & Cases</option>
+                    <option value="5">5. W-Questions</option>
+                    <option value="6">6. Verb Conjugation</option>
+                    <option value="7">7. Possessive Articles</option>
+                    <option value="8">8. Sentence Structure</option>
+                    <option value="9">9. Modal Verbs</option>
+                    <option value="10">10. Prepositions</option>
+                    <option value="11">11. Perfekt Tense</option>
+                    <option value="12">12. Flashcards: Family</option>
+                    <option value="13">13. Flashcards: Food</option>
+                    <option value="14">14. Flashcards: Places</option>
+                    <option value="15">15. Flashcards: Adjectives</option>
+                    <option value="16">16. Daily Routine</option>
+                    <option value="17">17. Clothing</option>
+                    <option value="18">18. Weather</option>
+                    <option value="19">19. Final Test</option>
+                </select>
+            </div>
+            <button class="btn btn--primary" id="nextBtn" onclick="nextSlide()">Next →</button>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
